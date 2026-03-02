@@ -18,6 +18,7 @@ That's it. Claude Code reads the `CLAUDE.md` automatically and becomes the perso
 | Persona | Domain | Sources | Modules |
 |---------|--------|---------|---------|
 | [Jeff Bezos](jeff-bezos/) | Business, strategy, leadership | ~42 (24 shareholder letters 1997-2020, 18 interviews/speeches) | 20 |
+| [Jeff Bezos (Conversational)](jeff-bezos-conversational/) | Same as above, shorter responses | Same as Jeff Bezos | 20 |
 | [Esther Perel](esther-perel/) | Relationships, desire, relational therapy | 153 (138 essays, 15 interview transcripts) | 20 |
 
 ### What to Expect
