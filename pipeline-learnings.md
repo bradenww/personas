@@ -76,6 +76,19 @@ Tracking learnings from each persona build to improve the pipeline over time. Ea
 - [x] Add response length guidance to CLAUDE.md Operating Principles template
 - [x] Add note that "Decision-Making Toolkit" section must be reinterpreted per domain
 
+## Pipeline-Level Lessons (General, 2026-03-03)
+
+### Phase 2: Source Acquisition
+19. **Batch all network requests into Phase 2.** During source acquisition, resolve ALL audio URLs upfront -- RSS feeds, direct download links, podcast CDN URLs. Coming out of Phase 2, you should have a concrete URL for every source that needs transcription. Do NOT discover audio URLs ad-hoc during later phases. This avoids redundant network permission prompts and keeps later phases focused on processing, not discovery.
+
+20. **Rank sources by quality, not cost.** When prioritizing which sources to acquire, rank by probable signal quality (depth of interview, interviewer quality, topic coverage, candor) -- NOT by whether the transcript/audio is free. We want the highest quality sources first. Cost (transcription fees, paywalls) is a secondary concern. A $0.70 transcription of a foundational 71-minute interview is always worth more than a free but thin 5-minute clip.
+
+21. **Spotify DRM blocks audio extraction.** Spotify uses Widevine DRM -- even with a logged-in Playwright session, audio streams are encrypted and cannot be extracted as URLs for AssemblyAI or any external transcription service. Do NOT attempt the Spotify approach for future persona builds. Instead, use public podcast RSS feeds (Megaphone, Art19, Libsyn, etc.) to get direct mp3 URLs, or Apple Podcasts via `yt-dlp` as a reliable fallback.
+
+22. **RSS feed audio URLs can be stale or remapped.** Podcast hosting platforms (especially Megaphone) sometimes remap audio file IDs when episodes are re-uploaded or feeds are restructured. An RSS enclosure URL for episode #101 may actually serve a completely different episode's audio. Always verify by checking the transcription output against expected content. When in doubt, use `yt-dlp` on the Apple Podcasts URL to get the canonical audio URL -- Apple maintains correct mappings even when RSS feeds drift.
+
+---
+
 ## Pending Improvements
 - [ ] Create verification pass for [PARAPHRASE — VERIFY] flags
 - [ ] Add cross-model critic evaluation to Phase 7 testing (not just self-eval)

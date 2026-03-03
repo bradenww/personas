@@ -12,7 +12,7 @@ A systematic process for building an AI coaching persona from a public figure's 
 - `synthesis/taxonomy-guide.md` -- Module design + frequency analysis
 - `synthesis/extractions/` -- Per-source structured extractions
 
-Raw source files (transcripts, essays, etc.) are stored in the top-level `sources/[persona-name]/` directory, which is gitignored. Source material is copyrighted and should not be committed to public repositories.
+Raw source files (transcripts, essays, etc.) are stored in the top-level `sources/[persona-name]/` directory, which is gitignored. Source material is often copyrighted and must not be committed to public repositories. **Never store sources inside the persona folder itself** (e.g., `[persona-name]/sources/`) — always use the centralized `sources/[persona-name]/` directory so there is one gitignore to trust.
 
 **Cost:** Typically $1-5 in transcription (AssemblyAI at $0.01/min) + LLM API costs for synthesis agents. Most transcripts can be found free online.
 
@@ -75,6 +75,14 @@ Rank by signal quality:
 
 ## Phase 2: Source Acquisition
 
+### Prerequisite: Verify `.gitignore` protects source files
+
+**Before writing any source files to disk**, confirm that `sources/` is listed in the repository's `.gitignore`. Run:
+```bash
+grep -q '^sources/' .gitignore && echo "OK" || echo "MISSING — add sources/ to .gitignore NOW"
+```
+If missing, add `sources/` to `.gitignore` immediately. This prevents copyrighted transcripts from being accidentally committed to a public repository. Do not proceed with source acquisition until this is confirmed.
+
 ### Rule: Search for free transcripts BEFORE paying for transcription
 
 Follow this search order for each source:
@@ -92,6 +100,12 @@ Follow this search order for each source:
 
 ### Source Acquisition Strategy (Lessons Learned)
 
+**Batch all network requests into Phase 2.** During source acquisition, resolve ALL audio URLs upfront -- RSS feeds, direct download links, podcast CDN URLs. Coming out of Phase 2, you should have a concrete URL for every source that needs transcription. Do NOT discover audio URLs ad-hoc during later phases. This avoids redundant network permission prompts and keeps later phases focused on processing, not discovery.
+
+**Rank sources by quality, not cost.** When prioritizing which sources to acquire, rank by probable signal quality (depth of interview, interviewer quality, topic coverage, candor) -- NOT by whether the transcript/audio is free. We want the highest quality sources first. Cost (transcription fees, paywalls) is a secondary concern. A $0.70 transcription of a foundational 71-minute interview is always worth more than a free but thin 5-minute clip.
+
+**Spotify DRM blocks audio extraction.** Do not attempt to extract audio from Spotify — Widevine DRM encrypts streams even with a logged-in Playwright session. Use public podcast RSS feeds (Megaphone, Art19, Libsyn) for direct mp3 URLs, or Apple Podcasts via `yt-dlp` as a reliable fallback. RSS feed audio URLs can be stale or remapped — always verify transcription output matches expected content. When in doubt, `yt-dlp` on the Apple Podcasts URL gives the canonical audio URL.
+
 In practice, most transcripts for well-known public figures can be found free online. For the Bezos persona (22 sources):
 - **18 transcripts found free** -- official publisher sites (princeton.edu, aboutamazon.com), show archives (charlierose.com), conference organizers, blogs, fan transcriptions
 - **4 required AssemblyAI** -- Summit Series 2017, Code Conference 2016, re:Invent 2012, Blue Origin 2019 (all available on YouTube but no quality transcripts existed online)
@@ -105,7 +119,7 @@ In practice, most transcripts for well-known public figures can be found free on
 - `aboutamazon.com` / company sites -- Shareholder letters, keynotes, press events
 
 ### File format
-Save each source as an individual `.md` file in `sources/` with a metadata header:
+Save each source as an individual `.md` file in `sources/[persona-name]/` (the top-level gitignored directory) with a metadata header:
 ```markdown
 # [Person Name] -- [Source Title] ([Year])
 - **Date:** YYYY-MM-DD
@@ -129,7 +143,7 @@ Launch **one Opus agent per source document**. Each agent reads only its assigne
 ### Extraction Prompt Template
 
 ```
-Read [PERSONA_DIR]/sources/[SOURCE_FILE] and extract a structured summary with these sections:
+Read sources/[PERSONA_NAME]/[SOURCE_FILE] and extract a structured summary with these sections:
 
 1. **Key Themes** -- The 3-5 main topics or ideas discussed
 2. **Principles & Beliefs** -- Any rules, standards, or convictions stated or implied.
@@ -647,14 +661,13 @@ Batch parallel agents in groups of 5. Opus agents running in parallel hit API ce
     taxonomy-guide.md          <- Module design + frequency analysis
     extractions/               <- Phase 3 per-source extraction files
       [source-name]-extraction.md
-  sources/                     <- (optional) raw source transcripts
-    [source-name].md
 ```
+
+Raw sources live in the top-level `sources/[persona-name]/` directory (gitignored), NOT inside the persona folder.
 
 Notes:
 - No separate `quotes.md` -- quotes live inline in modules.
 - No separate index file -- the routing table in CLAUDE.md is the index.
-- Sources directory is optional -- for large corpora, you may want to keep sources in a separate location and just reference paths.
 
 ---
 
