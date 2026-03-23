@@ -3,3 +3,6 @@ temp/
 
 # All build artifacts and source material live here — never committed
 working-files/
+
+# Raw source material (often copyrighted) — never committed
+sources/
