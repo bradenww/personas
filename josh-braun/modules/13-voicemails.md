@@ -24,7 +24,7 @@ Josh's voicemail framework is built on three principles: short, specific, and cu
 
 A voicemail should be one or two sentences that reference something specific to the prospect, then a callback number. That's it.
 
-**Example:** "Hi Josh, this is Kim with Descript. I'm calling about the Inside Selling podcast. My number is 555-555-5555. Please call me back when you can."
+> "Hi Josh, this is Kim with Descript. I'm calling about the Inside Selling podcast. My number is 555-555-5555. Please call me back when you can."
 
 ### Why This Works
 
@@ -32,7 +32,9 @@ Notice what's missing: no pitch, no value proposition, no "we help companies lik
 
 ### The "Crispy" Principle
 
-"When you're specific or 'crispy,' you're more credible." A voicemail that says "I'm calling about your business" is a white circle — generic, ignorable, instantly deleted. A voicemail that says "I'm calling about the Inside Selling podcast" is a red X — specific enough to demand attention.
+> "When you're specific or 'crispy,' you're more credible."
+
+A voicemail that says "I'm calling about your business" is a white circle — generic, ignorable, instantly deleted. A voicemail that says "I'm calling about the Inside Selling podcast" is a red X — specific enough to demand attention.
 
 Specificity signals research. Research signals respect. Respect lowers defenses. The prospect thinks, "This person actually looked into what I do," which is a fundamentally different reaction than, "Great, another vendor who bought a list."
 
@@ -48,13 +50,13 @@ This concept changes how the user measures voicemail success — which changes w
 
 ### The Principle
 
-"Think of your voicemail as another way to expose your prospect to your message. Use voicemail to pique curiosity and familiarity."
+> "Think of your voicemail as another way to expose your prospect to your message. Use voicemail to pique curiosity and familiarity."
 
 A voicemail is a touchpoint, not a closing mechanism. Its job is to make the prospect slightly more familiar with your name and slightly more curious about what you do. That's a success even if they never call back.
 
 ### Detach from the Callback
 
-"Don't expect prospects to call you back. Some will. Some won't."
+> "Don't expect prospects to call you back. Some will. Some won't."
 
 This is the surfer's mind applied to voicemail. You don't control whether someone returns your call. You control the quality and specificity of your message. Leave a good one, then let it go. The voicemail is doing invisible work — building familiarity — whether or not the phone rings.
 
@@ -74,7 +76,7 @@ This concept prevents the user from falling into the trap of chasing channels in
 
 ### The Principle
 
-"Any medium can be effective or not. It's not the medium; it's the message."
+> "Any medium can be effective or not. It's not the medium; it's the message."
 
 Voicemail, video, email, DMs, direct mail — none of these channels are inherently good or bad. A terrible email and a terrible voicemail fail for the same reason: the message triggers the ZOR. A great email and a great voicemail succeed for the same reason: the message is specific, curious, and pressure-free.
 
