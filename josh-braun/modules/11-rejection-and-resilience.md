@@ -1,10 +1,12 @@
-### Dealing with Rejection and Building Resilience
+# Module 11: Dealing with Rejection and Building Resilience
 
-Load when the user is burned out from rejection, losing confidence, taking "no" personally, struggling with the emotional toll of sales, or questioning whether they're cut out for this work.
+**When to load:** User is burned out from rejection, losing confidence, taking "no" personally, struggling with the emotional toll of sales, or questioning whether they're cut out for this work.
+
+**Cross-references:** Module 1 (ZOR — understanding WHY rejection happens), Module 6 (dealing with specific ghosting situations), Module 12 (when rejection triggers identity crisis)
 
 ---
 
-#### Detach from the Outcome [4/5] [SIGNATURE] [EMPHATIC]
+## Detach from the Outcome [4/5] [SIGNATURE] [EMPHATIC]
 
 This is Josh Braun's most repeated principle across every context — and it's most critical here, when rejection has piled up and confidence is eroding.
 
@@ -22,7 +24,7 @@ You control your preparation, your message, your questions, and your intent. You
 
 ---
 
-#### The Surfer's Mind [2/5] [SIGNATURE]
+## The Surfer's Mind [2/5] [SIGNATURE]
 
 Josh's central metaphor for resilience in sales:
 
@@ -36,7 +38,7 @@ Josh advises salespeople to "let go of expectations," "detach from the outcome,"
 
 ---
 
-#### Obstacles as Opportunities [1/5]
+## Obstacles as Opportunities [1/5]
 
 "When you view obstacles as opportunities, your mind shifts. You have fun figuring out the problem. You experiment. You slow down. You're more patient. You're kind to yourself. You make progress."
 
@@ -48,7 +50,7 @@ This is a mindset reframe for the person who sees every lost deal as evidence th
 
 ---
 
-#### Mindfulness in Sales [2/5]
+## Mindfulness in Sales [2/5]
 
 "Without mindfulness training, people can go their whole life without even realizing they are slaves or puppets to their thoughts, which they don't control."
 
@@ -60,7 +62,7 @@ Mindfulness doesn't eliminate the fear. It creates space between the thought and
 
 ---
 
-#### Guard Against Negativity [1/5]
+## Guard Against Negativity [1/5]
 
 "Listening to negativity long enough makes you negative too. Exposure to prolonged negativity peels away neurons in the brain's hippocampus — in other words, too much negativity makes you dumb."
 
@@ -70,7 +72,7 @@ This applies to sales environments where rejection is constant and team culture 
 
 ---
 
-#### Patience [2/5]
+## Patience [2/5]
 
 "Most people don't fail at selling, they're just not patient enough."
 
@@ -84,7 +86,7 @@ Patience isn't passive waiting. It's continuing to do the work without demanding
 
 ---
 
-#### Stories
+## Stories
 
 **The Surfer Metaphor** [SIGNATURE]
 
@@ -100,7 +102,7 @@ Patience isn't passive waiting. It's continuing to do the work without demanding
 
 ---
 
-#### Cross-References
+## Cross-References
 
 | Related Topic | Module | What's There |
 |---|---|---|
